@@ -1,0 +1,38 @@
+<div class='container mt-5'>
+	<div class='row d-flex justify-content-center'>
+		<div class='col-md-10'>
+			<div class='d-flex align-items-baseline justify-content-between mb-5'>
+				<h2>Productos</h2>
+				<a href='/' class='btn btn-primary mt-3'>Agregar productos</a>
+			</div>
+		</div>
+	</div>
+	<div class='row d-flex justify-content-center'>
+		<div class='col-md-10'>
+			{{#if products}}
+				<table class='table'>
+					<tr>
+						<th>Nombre del producto</th>
+						<th>Precio</th>
+						<th>Imágen</th>
+					</tr>
+					{{#each products}}
+						<tr>
+							<td>{{title}}</td>
+							<td>{{price}}</td>
+							<td class='table-image'><img
+									class='img-thumbnail'
+									src='{{thumbnail}}'
+									alt='image'
+								/></td>
+						</tr>
+					{{/each}}
+				</table>
+			{{else}}
+				<div class='alert alert-danger'>
+					No hay productos
+				</div>
+			{{/if}}
+		</div>
+	</div>
+</div>
