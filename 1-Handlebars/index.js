@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require('path');
 const cors = require('cors');
-const { engine, create } = require('express-handlebars');
+const { create } = require('express-handlebars');
 const bodyparser = require('body-parser');
 
 const products = [];
